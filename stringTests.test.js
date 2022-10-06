@@ -1,4 +1,5 @@
-const stringLength = require('./stringLength');
+const stringLength = require('./stringTests');
+const reverseString = require('./stringTests');
 
 test('String length is an integer', () => { 
     expect(typeof stringLength('Jonathan')).toBe('number');
@@ -9,4 +10,7 @@ test('String length is an integer', () => {
     expect(stringLength('Jonathan')).toBeLessThanOrEqual(10)
  })
 
-
+ test('Reverse string should be same length', () => {
+    const ourString = 'Jonathan'
+    expect(reverseString(ourString)).toEqual(ourString.length);
+ })
